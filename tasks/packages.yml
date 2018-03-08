@@ -1,11 +1,13 @@
 ---
 
 - name: update the apt package index
+  gather_facts: True
   apt:
     update_cache: yes
   when: ansible_pkg_mgr == 'apt'
 
 - name: update the yum package index
+  gather_facts: True
   yum:
     name: '*'
     state: latest
