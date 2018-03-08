@@ -39,7 +39,7 @@
   async: '{{ steamcmd_login_timeout}}'
   poll: 5
   register: steam_login
-  no_log: yes
+  no_log: no
   when: steamcmd_steam.guard
 
 - name: linking steamclient.so to the ~/.steam/sdk32/steamclient.so directory
