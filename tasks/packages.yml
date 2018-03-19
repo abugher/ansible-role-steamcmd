@@ -3,6 +3,7 @@
   apt:
     update_cache: yes
   when: ansible_pkg_mgr == 'apt'
+  changed_when: false
 
 - name: update the yum package index
   yum:

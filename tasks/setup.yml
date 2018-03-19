@@ -41,6 +41,7 @@
   register: steam_login
   no_log: no
   when: steamcmd_steam.guard
+  changed_when: false
 
 - name: linking steamclient.so to the ~/.steam/sdk32/steamclient.so directory
   file:
