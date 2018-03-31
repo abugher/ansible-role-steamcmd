@@ -1,1 +1,10 @@
 ---
+initialize_files:
+  - owner:              'steam'
+    group:              'steam'
+    mode:               '0655'
+    dest:               '/var/log/update_steam.log'
+  - owner:              'steam'
+    group:              'steam'
+    mode:               '0655'
+    dest:               '/var/log/update_steam.ret'

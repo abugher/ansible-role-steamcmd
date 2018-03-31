@@ -1,0 +1,40 @@
+#!/bin/bash
+# Run as steam user.
+
+
+function main {
+  cd ~/cmd || fail "Failed to change directory."
+
+  wget -N https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz || fail "Failed to download steam tarball."
+
+  if test -f steam_update_touchfile.txt; then
+    touchfile_timestamp=$(date +%s -r steam_update_touchfile.txt) || fail "Failed to get timestamp for touchfile."
+  else
+    touchfile_timestamp=0
+  fi
+
+  if test -f steamcmd_linux.tar.gz; then
+    tarball_timestamp=$(date +%s -r steamcmd_linux.tar.gz) || fail "Failed to get timestamp for tarball."
+  fi
+
+  if ! test "${tarball_timestamp}" -lt "${touchfile_timestamp}"; then
+    install_routine || fail "Failed to install."
+    touch steam_update_touchfile.txt || fail "Failed to update touch file."
+  fi
+}
+
+
+function install_routine {
+  tar xf steamcmd_linux.tar.gz
+  echo "Installation complete."
+}
+
+
+function fail {
+  printf "Error:  %s\n" "${1:-unknown}"
+  exit 1
+}
+
+
+main > /var/log/update_steam.log 2>&1
+echo $? > /var/log/update_steam.ret

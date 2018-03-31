@@ -7,3 +7,5 @@
   become: yes
   become_user: '{{ steamcmd_user }}'
   become_method: 'sudo'
+- include: automatic_updates.yml
+  become: yes
