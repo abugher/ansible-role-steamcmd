@@ -1,5 +1,5 @@
 ---
-- include:              '../tasks/initialize_files.yml'
+- include:              '../tasks/create_files.yml'
 
 - copy:
     src:                'files/bin/update_steam'

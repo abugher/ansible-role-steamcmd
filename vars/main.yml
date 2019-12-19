@@ -1,10 +1,12 @@
 ---
-initialize_files:
+create_files:
   - owner:              'steam'
     group:              'steam'
     mode:               '0644'
-    dest:               '/var/log/update_steam.log'
+    state:              'touch'
+    path:               '/var/log/update_steam.log'
   - owner:              'steam'
     group:              'steam'
     mode:               '0644'
-    dest:               '/var/log/update_steam.ret'
+    state:              'touch'
+    path:               '/var/log/update_steam.ret'
