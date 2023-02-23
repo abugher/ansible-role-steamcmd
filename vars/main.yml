@@ -1,4 +1,5 @@
 ---
+dependencies:
 create_files:
   - owner:              'steam'
     group:              'steam'
