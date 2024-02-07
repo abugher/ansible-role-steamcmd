@@ -1,5 +1,5 @@
 ---
-- include_vars: "../../../sensitive-ansible/inventory/host_vars/{{ steamcmd_server }}.yml"
+- include_vars: "../../../sensitive-ansible/inventory/host_vars/{{ inventory_hostname }}.yml"
 - include: packages.yml
 - include: user.yml
   when: steamcmd_create_user
