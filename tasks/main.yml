@@ -1,11 +1,11 @@
 ---
 - include_vars: "../../../sensitive-ansible/inventory/host_vars/{{ inventory_hostname }}.yml"
-- include: packages.yml
-- include: user.yml
+- include_tasks: packages.yml
+- include_tasks: user.yml
   when: steamcmd_create_user
-- include: setup.yml
+- include_tasks: setup.yml
   become: yes
   become_user: '{{ steamcmd_user }}'
   become_method: 'sudo'
-- include: automatic_updates.yml
+- include_tasks: automatic_updates.yml
   become: yes
