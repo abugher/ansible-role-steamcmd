@@ -6,74 +6,32 @@ galaxy_info:
   min_ansible_version: 2.0
 
   platforms:
-  - role:     name: EL # RedHat/CentOS
-    tags:     
-      - 'dependency'
+  - name: EL # RedHat/CentOS
     versions:
-    - role:     6
-      tags:     
-        - 'dependency'
-    - role:     7
-      tags:     
-        - 'dependency'
-  - role:     name: Fedora
-    tags:     
-      - 'dependency'
+    - 6
+    - 7
+  - name: Fedora
     versions:
-    - role:     21
-      tags:     
-        - 'dependency'
-    - role:     22
-      tags:     
-        - 'dependency'
-  - role:     name: opensuse
-    tags:     
-      - 'dependency'
+    - 21
+    - 22
+  - name: opensuse
     versions:
-    - role:     13.1
-      tags:     
-        - 'dependency'
-    - role:     13.2
-      tags:     
-        - 'dependency'
-  - role:     name: Ubuntu
-    tags:     
-      - 'dependency'
+    - 13.1
+    - 13.2
+  - name: Ubuntu
     versions:
-    - role:     precise # 12.04 LTS
-      tags:     
-        - 'dependency'
-    - role:     trusty # 14.04 LTS
-      tags:     
-        - 'dependency'
-    - role:     vivid # 15.04
-      tags:     
-        - 'dependency'
-  - role:     name: Debian
-    tags:     
-      - 'dependency'
+    - precise # 12.04 LTS
+    - trusty # 14.04 LTS
+    - vivid # 15.04
+  - name: Debian
     versions:
-    - role:     wheezy # 7.0
-      tags:     
-        - 'dependency'
-    - role:     jessie # 8.0
-      tags:     
-        - 'dependency'
+    - wheezy # 7.0
+    - jessie # 8.0
   galaxy_tags:
-    - role:     steam
-      tags:     
-        - 'dependency'
-    - role:     steamcmd
-      tags:     
-        - 'dependency'
-    - role:     game
-      tags:     
-        - 'dependency'
-    - role:     gaming
-      tags:     
-        - 'dependency'
-    - role:     dedicatedserver
-      tags:     
-        - 'dependency'
+    - steam
+    - steamcmd
+    - game
+    - gaming
+    - dedicatedserver
 
 dependencies: []
