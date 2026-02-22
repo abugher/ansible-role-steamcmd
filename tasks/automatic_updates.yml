@@ -1,5 +1,5 @@
 ---
-- include_tasks:        '../tasks/create_files.yml'
+- include_tasks:        'tasks/common/create_files.yml'
 
 - copy:
     src:                'files/bin/update_steam'
